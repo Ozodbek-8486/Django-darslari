@@ -364,8 +364,8 @@
         <div class="header-container">
             <a href="#" class="logo">BlogSayt</a>
             <div class="auth-buttons">
-                <a href="users/login" class="btn btn-login">Kirish</a>
-                <a href="users/register" class="btn btn-register">Ro'yxatdan o'tish</a>
+                <a href="{% url 'users:login' %}" class="btn btn-login">Kirish</a>
+                <a href="{% url 'users:register' %}" class="btn btn-register">Ro'yxatdan o'tish</a>
             </div>
         </div>
     </header>
@@ -382,110 +382,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="bosh">
-        <h1>Xush kelibsiz!</h1>
-        <p>Bu yerda siz eng so'nggi yangiliklar, foydali maqolalar va qiziqarli ma'lumotlar bilan tanishishingiz mumkin. Bizning blog orqali yangi bilimlar oling va o'z tajribangizni boshqalar bilan bo'lishing.</p>
-    </section>
 
-    <!-- Main Content -->
-    <main class="main">
-        <section id="blog">
-            <h2 class="section-title">So'nggi Maqolalar</h2>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">Texnologiya</div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Sun'iy intellekt va kelajak</h3>
-                        <div class="blog-meta">15 Dekabr 2024 • Admin</div>
-                        <p class="blog-excerpt">Sun'iy intellekt texnologiyalari qanday rivojlanmoqda va bu bizning hayotimizga qanday ta'sir qilmoqda? Ushbu maqolada batafsil ma'lumot...</p>
-                        <a href="#" class="read-more">Davomini o'qish →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">Dasturlash</div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Web dasturlashni o'rganish</h3>
-                        <div class="blog-meta">12 Dekabr 2024 • Admin</div>
-                        <p class="blog-excerpt">Web dasturlashni qayerdan boshlash kerak? HTML, CSS va JavaScript asoslari haqida to'liq qo'llanma...</p>
-                        <a href="#" class="read-more">Davomini o'qish →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">Biznes</div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Onlayn biznes boshlash</h3>
-                        <div class="blog-meta">10 Dekabr 2024 • Admin</div>
-                        <p class="blog-excerpt">Internetda o'z biznesingizni qanday boshlash mumkin? Muvaffaqiyatli onlayn biznes uchun muhim maslahatlar...</p>
-                        <a href="#" class="read-more">Davomini o'qish →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">Ta'lim</div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Samarali o'qish usullari</h3>
-                        <div class="blog-meta">8 Dekabr 2024 • Admin</div>
-                        <p class="blog-excerpt">Qanday qilib tezroq va samaraliroq o'qish mumkin? Xotira va diqqatni rivojlantirish bo'yicha maslahatlar...</p>
-                        <a href="#" class="read-more">Davomini o'qish →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">Salomatlik</div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Sog'lom turmush tarzi</h3>
-                        <div class="blog-meta">5 Dekabr 2024 • Admin</div>
-                        <p class="blog-excerpt">Sog'lom va faol hayot kechirish uchun qanday qoidalarga rioya qilish kerak? Foydali maslahatlar va tavsiyalar...</p>
-                        <a href="#" class="read-more">Davomini o'qish →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">Sayohat</div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">O'zbekistonning go'zal joylari</h3>
-                        <div class="blog-meta">3 Dekabr 2024 • Admin</div>
-                        <p class="blog-excerpt">Vatanimizning eng chiroyli va tarixiy joylari bilan tanishing. Sayohat qilish uchun eng yaxshi joylar...</p>
-                        <a href="#" class="read-more">Davomini o'qish →</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h3>Mashhur Maqolalar</h3>
-            <ul>
-                <li><a href="#">Dasturlashni qayerdan boshlash?</a></li>
-                <li><a href="#">Ingliz tilini o'rganish usullari</a></li>
-                <li><a href="#">Muvaffaqiyatli karyera qurish</a></li>
-                <li><a href="#">Moliyaviy savodxonlik asoslari</a></li>
-                <li><a href="#">Vaqtni samarali boshqarish</a></li>
-            </ul>
-        </aside>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3>BlogSayt</h3>
-            <p>Bilim va tajriba almashish uchun eng yaxshi platforma. Bizning maqsadimiz - foydali ma'lumotlar bilan o'rtoqlashish va jamiyatni rivojlantirishga hissa qo'shish.</p>
-            
-            <div class="social-links">
-                <a href="#">f</a>
-                <a href="#">t</a>
-                <a href="#">i</a>
-                <a href="#">y</a>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 BlogSayt. Barcha huquqlar himoyalangan.</p>
-            </div>
-        </div>
-    </footer>
+   
 </body>
 </html>
